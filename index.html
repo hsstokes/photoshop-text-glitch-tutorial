@@ -88,6 +88,26 @@
     box-shadow: 0 0 15px rgba(234,55,163,0.1);
   }
 
+  /* ===== BANNER STYLES ===== */
+  .banner {
+    text-align: center;
+    margin: 1.8rem 0;
+  }
+  .banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #00b0b0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .banner-caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #444;
+    margin-top: 0.3rem;
+  }
+
   .video-section {
     margin-top: 3rem;
     padding: 1.5rem;
@@ -115,11 +135,11 @@
     background: linear-gradient(135deg, #e5ffff, #fff5fb);
     border: 2px solid #00b0b0;
     box-shadow: 0 0 25px rgba(0,0,0,0.05);
-    box-sizing: border-box;          /* ensures borders don't expand width */
-    max-width: 100%;                 /* keep within main frame */
-    overflow-wrap: break-word;       /* wrap long text */
+    box-sizing: border-box;          
+    max-width: 100%;                 
+    overflow-wrap: break-word;       
     word-break: break-word;
-    overflow: hidden;                /* hides any shape overspill */
+    overflow: hidden;                
   }
   .quiz-title {
     text-align:center;
@@ -146,10 +166,7 @@
     padding: 10px;
     border-radius: 5px;
   }
-  .options {
-    display: flex;
-    flex-direction: column;
-  }
+  .options {display:flex; flex-direction:column;}
   .quiz-btn {
     font-family: inherit;
     margin: 6px 0;
@@ -182,20 +199,20 @@
   }
 
   @media(max-width:700px){
-  .quiz-section{
-    padding:1.2rem;
-    margin-left:auto;
-    margin-right:auto;
+    .quiz-section{
+      padding:1.2rem;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .quiz-title{
+      font-size:1.2rem;
+      padding:8px;
+    }
+    .quiz-btn{
+      font-size:0.9rem;
+      line-height:1.3;
+    }
   }
-  .quiz-title{
-    font-size:1.2rem;
-    padding:8px;
-  }
-  .quiz-btn{
-    font-size:0.9rem;
-    line-height:1.3;
-  }
-}
 </style>
 </head>
 <body>
@@ -226,12 +243,24 @@
     </ul>
   </div>
 
+  <!-- Banner 1 -->
+  <div class="banner">
+    <img src="banner-step1-text-selection.jpg" alt="Example of selected keywords layout">
+    <div class="banner-caption">Keywords placed clearly with simple monospaced fonts</div>
+  </div>
+
   <h2>Step 2 – Rasterize and Duplicate</h2>
   <div class="box">
     <ul>
       <li>In the <em>Layers</em> panel, right‑click → <strong>Rasterize Type</strong>.</li>
       <li>Duplicate the rasterized layer (<em>Cmd / Ctrl+J</em>) to keep a backup.</li>
     </ul>
+  </div>
+
+  <!-- Banner 2 -->
+  <div class="banner">
+    <img src="banner-step2-rasterize.jpg" alt="Example of rasterized and duplicated text layers">
+    <div class="banner-caption">Layers rasterized and duplicated for editing safety</div>
   </div>
 
   <h2>Step 3 – Create Glitches</h2>
@@ -243,6 +272,12 @@
     </ul>
   </div>
 
+  <!-- Banner 3 -->
+  <div class="banner">
+    <img src="banner-step3-create-glitches.jpg" alt="Example of moving horizontal glitch strips">
+    <div class="banner-caption">Horizontal text strips shifted to create subtle glitches</div>
+  </div>
+
   <h2>Step 4 – Wave Distortion</h2>
   <div class="box">
     <ul>
@@ -250,6 +285,12 @@
       <li>Go to <strong>Filter → Distort → Wave</strong> for controlled ripple effects.</li>
       <li>Add <strong>Noise</strong> for texture variation if you wish.</li>
     </ul>
+  </div>
+
+  <!-- Banner 4 -->
+  <div class="banner">
+    <img src="banner-step4-wave.jpg" alt="Example of wave distortion on text strips">
+    <div class="banner-caption">Wave filter adds organic motion to the glitch.</div>
   </div>
 
   <h2>Step 5 – Integrate with Layout</h2>
@@ -261,6 +302,12 @@
     </ul>
   </div>
 
+  <!-- Banner 5 -->
+  <div class="banner">
+    <img src="banner-step5-layout-integration.jpg" alt="Example of glitch text integrated with research layout">
+    <div class="banner-caption">Compositional example: glitched text supporting research visuals</div>
+  </div>
+
   <h2>Step 6 – Save and Reflect</h2>
   <div class="box">
     <ul>
@@ -270,12 +317,17 @@
     </ul>
   </div>
 
+  <!-- Banner 6 -->
+  <div class="banner">
+    <img src="banner-step6-save-reflect.jpg" alt="Example showing saved PSD and JPG workflows">
+    <div class="banner-caption">Saving layer file (.PSD) and sharing image (.JPG) for reflection</div>
+  </div>
+
   <!-- Video Section -->
   <div class="video-section">
     <h2>Video Tutorial Demonstration</h2>
     <p>Watch a walkthrough of how meaning can be built visually through this creative glitch technique.</p>
     <div class="video-wrapper">
-      <!-- Replace Panopto or YouTube embed link -->
       <iframe src="https://your-panopto-embed-link-here"
               title="Photoshop Text Glitch Demonstration"
               allowfullscreen></iframe>
@@ -296,67 +348,36 @@
 
 <script>
 const quizData = [
-  {
-    question:"1️⃣ What is the main goal of the Creative Text & Glitch exercise?",
-    options:[
+  {question:"1️⃣ What is the main goal of the Creative Text & Glitch exercise?",options:[
       "To decorate a page with aesthetic effects",
       "To think deeply about words and meaning through visual making",
       "To master every Photoshop filter",
-      "To copy an artist’s exact composition"
-    ],
-    correct:1
-  },
-  {
-    question:"2️⃣ Why do you select short phrases instead of long paragraphs?",
-    options:[
+      "To copy an artist’s exact composition"],correct:1},
+  {question:"2️⃣ Why do you select short phrases instead of long paragraphs?",options:[
       "To make the document lighter to save",
       "Short phrases help isolate ideas and emotions for reflection",
       "There is a character limit in Photoshop",
-      "Teachers prefer small text"
-    ],
-    correct:1
-  },
-  {
-    question:"3️⃣ Conceptually, what can a glitch express?",
-    options:[
+      "Teachers prefer small text"],correct:1},
+  {question:"3️⃣ Conceptually, what can a glitch express?",options:[
       "A random design error",
       "A visual metaphor for interruption or discovery in thought",
-      "Just a colour contrast",
-      "Nothing at all—it must be avoided"
-    ],
-    correct:1
-  },
-  {
-    question:"4️⃣ What is encouraged when working across mixed cultural classrooms?",
-    options:[
+      "Just a colour contrast","Nothing at all—it must be avoided"],correct:1},
+  {question:"4️⃣ What is encouraged when working across mixed cultural classrooms?",options:[
       "Silent individual work only",
       "Mimicking professional designers",
       "Expressing ideas freely and making reflective connections to research writing",
-      "Rushing to complete for a deadline"
-    ],
-    correct:2
-  },
-  {
-    question:"5️⃣ Which tool introduces your chosen keywords?",
-    options:[
-      "Move Tool",
-      "Type Tool (T)",
-      "Clone Stamp Tool",
-      "Brush Tool"
-    ],
-    correct:1
-  }
+      "Rushing to complete for a deadline"],correct:2},
+  {question:"5️⃣ Which tool introduces your chosen keywords?",options:[
+      "Move Tool","Type Tool (T)","Clone Stamp Tool","Brush Tool"],correct:1}
 ];
-let currentQuestion=0; let score=0;
-
+let currentQuestion=0;let score=0;
 function loadQuestion(){
   const q=quizData[currentQuestion];
   document.getElementById("quiz").innerHTML=`
     <div class='question'>${q.question}</div>
     <div class='options'>
       ${q.options.map((o,i)=>`<button class='quiz-btn' onclick='checkAnswer(${i})'>${o}</button>`).join('')}
-    </div>
-  `;
+    </div>`;
 }
 function checkAnswer(i){
   if(i===quizData[currentQuestion].correct){score++;}
@@ -364,10 +385,10 @@ function checkAnswer(i){
   currentQuestion<quizData.length?loadQuestion():showResult();
 }
 function showResult(){
-  const total=quizData.length, percent=Math.round((score/total)*100);
+  const total=quizData.length,percent=Math.round((score/total)*100);
   let msg="";
-  if(percent>=80) msg="🌟 Excellent — deep, reflective understanding!";
-  else if(percent>=50) msg="🧠 Good job — keep exploring meanings!";
+  if(percent>=80)msg="🌟 Excellent — deep, reflective understanding!";
+  else if(percent>=50)msg="🧠 Good job — keep exploring meanings!";
   else msg="💭 Keep reflecting on how language shapes visual ideas.";
   document.getElementById("quiz").innerHTML="";
   document.getElementById("result").innerHTML=`You scored <strong>${score}</strong> / <strong>${total}</strong> (${percent}%)<br>${msg}`;
