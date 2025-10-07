@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Text & Glitch Exercise – Photoshop Tutorial</title>
+<style>
+  /* ===== GENERAL STYLING ===== */
+  body {
+    margin: 0;
+    font-family: "Andale Mono", "Orator Std", "Courier New", monospace;
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, rgba(0,180,200,0.3) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,180,200,0.3) 1px, transparent 1px);
+    background-size: 32px 32px;  /* grid look */
+    padding: 3vw;
+    color: #181818;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffffee;
+    border: 2px solid #00b0b0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    padding: 3rem 4rem;
+  }
+
+  h1, h2 {
+    color: #0a8080;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  h1 {font-size: 1.8rem; margin-bottom: 0.5rem;}
+  h2 {font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.5rem;}
+  p, li {line-height: 1.6;}
+  ul {margin-left: 1.2rem;}
+
+  .highlight {
+    color: #ea37a3;
+    font-weight: bold;
+  }
+
+  .box {
+    border: 1.5px solid #00b0b0;
+    border-radius: 6px;
+    padding: 1.2rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #fefefe;
+  }
+
+  .note {
+    border-left: 4px solid #ea37a3;
+    background: #fff3fb;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* ===== IMAGE & VIDEO SECTIONS ===== */
+  .example {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .example img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00b0b0;
+    border-radius: 6px;
+  }
+  .video-section {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border: 1.5px solid #ea37a3;
+    border-radius: 6px;
+    background: #fff9fb;
+  }
+  .video-section h2 {
+    color: #ea37a3;
+    margin-top: 0;
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .video-wrapper iframe, 
+  .video-wrapper video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  @media(max-width:700px){
+    body{padding:1rem;}
+    .container{padding:1.5rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Photoshop Tutorial — <span class="highlight">Creative Text & Glitch Exploration</span></h1>
+  <p><strong>Purpose:</strong> 
+  This exercise is designed to help you <em>think creatively with text</em> and explore language more deeply. 
+  By extracting <strong>key words or short phrases</strong> from an artist’s writing or from texts connected to your project, you will convert language into a visual form. 
+  The process encourages careful reading, reflection, and curiosity — useful skills for developing your ideas in <strong>Media, Design, or Business</strong> pathways. 
+  You will also learn a simple Photoshop method for creating subtle <em>text glitches</em> that represent thinking, emotion, or disruption through visual form.</p>
+  <div class="note">Recommended document setup: <strong>A3 landscape (420 × 297 mm) at 300 dpi.</strong></div>
+
+  <!-- ===== IMAGE EXAMPLE SECTION ===== -->
+  <div class="example">
+    <h2>Sample Image of the Glitched Experiment</h2>
+    <img src="glitch-sample.jpg" alt="Sample Image of the Glitched Experiment">
+  </div>
+
+  <h2>Step 1 — Select Key Words</h2>
+  <div class="box">
+    <ul>
+      <li>Choose several <strong>words or short phrases</strong> taken directly from a paragraph or artist text you’re researching.</li>
+      <li>Open a new Photoshop document (<strong>A3 landscape / 300 dpi</strong>).</li>
+      <li>Type your chosen words using the <strong>Type Tool (T)</strong>.</li>
+      <li>Use a clean, technical font such as <strong>Andale Mono</strong>, <strong>Orator Std</strong>, or a <strong>Typewriter‑style</strong> font.</li>
+    </ul>
+  </div>
+
+  <h2>Step 2 — Rasterize the Text</h2>
+  <div class="box">
+    <ul>
+      <li>In the <em>Layers</em> panel, <strong>right‑click</strong> your text layer → <strong>Rasterize Type</strong>.</li>
+      <li>Duplicate the rasterized layer (<em>Cmd/Ctrl + J</em>) so you can revert to the original if needed.</li>
+    </ul>
+  </div>
+
+  <h2>Step 3 — Create Basic Glitches</h2>
+  <div class="box">
+    <ul>
+      <li>Use the <strong>Rectangular Marquee Tool</strong> to select <em>narrow horizontal strips</em> of the text.</li>
+      <li>Press <strong>Cmd/Ctrl + J</strong> to copy each strip onto a new layer.</li>
+      <li>Use the <strong>Move Tool (V)</strong> to nudge strips slightly in different directions.</li>
+    </ul>
+  </div>
+
+  <h2>Step 4 — Merge and Distort Using Wave</h2>
+  <div class="box">
+    <ul>
+      <li>Select your new strip layers and <strong>merge</strong> them (<em>Cmd/Ctrl + E</em>).</li>
+      <li>Go to <strong>Filter → Distort → Wave</strong>.</li>
+      <li>Keep the settings low for a <strong>subtle ripple</strong> across the text — just enough to show controlled distortion.</li>
+      <li>You can also add <strong>Filter → Noise → Add Noise</strong> for slight texture variation.</li>
+    </ul>
+  </div>
+
+  <h2>Step 5 — Integrate Into Layouts</h2>
+  <div class="box">
+    <ul>
+      <li>Use the glitched text as part of a <strong>background</strong> or overlay to make your research pages visually engaging.</li>
+      <li>Make sure the effect remains relevant and supports your ideas or artist reference.</li>
+      <li>This can work effectively on <strong>Media, Design, or Business</strong> pages to enhance layout creativity.</li>
+    </ul>
+  </div>
+
+  <h2>Step 6 — Save and Reflect</h2>
+  <div class="box">
+    <ul>
+      <li>Save your final outcome as <code>keyword_glitch_experiment.jpg</code>.</li>
+      <li>Add a short annotation describing how this outcome reflects your chosen text or concept.</li>
+    </ul>
+  </div>
+
+  <!-- ===== VIDEO TUTORIAL SECTION ===== -->
+  <div class="video-section">
+    <h2>Video Tutorial Demonstration</h2>
+    <p>Watch the video below for a step‑by‑step demonstration of the technique.</p>
+    <div class="video-wrapper">
+      <!-- 🟣 Replace the link below with your Panopto or YouTube embed URL -->
+      <iframe src="https://your-panopto-embed-link-here" 
+              title="Photoshop Text Glitch Tutorial" 
+              allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Creative Text & Glitch Tutorial | Encouraging deeper engagement with research and visual exploration.
+  </footer>
+</div>
+
+</body>
+</html>
