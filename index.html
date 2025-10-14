@@ -450,6 +450,13 @@
     <div id="result"></div>
   </div>
 
+  <!-- MINI GAME SECTION -->
+  <div class="quiz-section">
+    <h2 class="quiz-title">🎮 Photoshop Tool Recap Game</h2>
+    <div id="toolGame"></div>
+    <div id="toolResult"></div>
+  </div>
+
   <footer>
     © 2025 Creative Text & Glitch Tutorial | Encouraging reflection, curiosity & visual experimentation.
   </footer>
@@ -503,6 +510,48 @@ function showResult(){
   document.getElementById("result").innerHTML=`You scored <strong>${score}</strong> / <strong>${total}</strong> (${percent}%)<br>${msg}`;
 }
 loadQuestion();
+ /* ---------- MINI GAME SCRIPT ---------- */
+  const toolGameData = [
+    { q: "Moves or repositions elements on the canvas", opts: ["Type Tool (T)", "Move Tool (V)", "Brush Tool (B)", "Crop Tool (C)"], correct: 1 },
+    { q: "Adds characters, words, or phrases", opts: ["Eraser Tool", "Type Tool (T)", "Paint Bucket", "Lasso"], correct: 1 },
+    { q: "Selects rectangular areas for copying or glitching text strips", opts: ["Marquee Tool (M)", "Zoom Tool", "Pen Tool", "Smudge Tool"], correct: 0 },
+    { q: "Combines several layers into one", opts: ["Merge Layers (Cmd/Ctrl+E)", "Brightness Adjustment", "Clone Layer", "Distort Wave Filter"], correct: 0 },
+    { q: "Creates wave‑like visual distortions", opts: ["Liquify", "Wave Filter", "Blur Filter", "Noise Filter"], correct: 1 }
+  ];
+
+  let tgIndex = 0, tgScore = 0;
+
+  function loadToolQ() {
+    const t = toolGameData[tgIndex];
+    document.getElementById("toolGame").innerHTML = `
+      <div class='question'>${t.q}</div>
+      <div class='options'>
+        ${t.opts.map((o, i) =>
+          `<button class='quiz-btn' onclick='checkTool(${i})'>${o}</button>`
+        ).join("")}
+      </div>`;
+  }
+
+  function checkTool(i) {
+    if (i === toolGameData[tgIndex].correct) tgScore++;
+    tgIndex++;
+    tgIndex < toolGameData.length ? loadToolQ() : endToolGame();
+  }
+
+  function endToolGame() {
+    const total = toolGameData.length;
+    const percent = Math.round((tgScore / total) * 100);
+    const msg =
+      percent >= 80 ? "🌟 Excellent tool recall!"
+      : percent >= 50 ? "🧠 Good grasp — keep practising!"
+      : "💭 Try reviewing the step images again.";
+    document.getElementById("toolGame").innerHTML = "";
+    document.getElementById("toolResult").innerHTML =
+      `You scored <strong>${tgScore}</strong>/<strong>${total}</strong> (${percent}%)<br>${msg}`;
+  }
+
+  loadToolQ();
+
 </script>
 
 </body>
