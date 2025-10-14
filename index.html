@@ -88,6 +88,64 @@
     box-shadow: 0 0 15px rgba(234,55,163,0.1);
   }
 
+  /* ===== ARTIST LINKS SECTION ===== */
+ .artist-links {
+    margin: 2.5rem 0 3rem;
+    padding: 1.5rem 1.8rem;
+    border: 2px solid #00b0b0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9ffff, #fff5fb);
+    box-shadow: 0 0 12px rgba(0,176,176,0.1);
+ }
+ .artist-links h2 {
+    color: #0a8080;
+    font-size: 1.4rem;
+    border-bottom: 2px dotted #ea37a3;
+    padding-bottom: .4rem;
+    margin-bottom: 1.2rem;
+ }
+ .artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+ }
+ .artist-card {
+    background: #ffffff;
+    border: 1.5px solid #00b0b0;
+    border-radius: 8px;
+    padding: 0.8rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ .artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,176,176,0.15);
+ }
+ .artist-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #ea37a3;
+    margin-bottom: 0.6rem;
+  }
+  .artist-card h3 {
+    color: #ea37a3;
+    margin: 0.4rem 0;
+    font-size: 1.05rem;
+  }
+  .artist-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+  }
+  .artist-card a {
+    text-decoration: none;
+  }
+  .artist-card a:hover h3 {
+    color: #0a8080;
+  }
+
   /* ===== BANNER STYLES ===== */
   .banner {
     text-align: center;
@@ -226,6 +284,54 @@
   It is especially useful for <strong>international and foundation‑level students</strong> who are learning how to connect research writing with practical design ideas. 
   You will also learn simple <strong>Photoshop glitch techniques</strong> that show feeling or interruption through controlled distortion.</p>
   <div class="note">Recommended setup: <strong>A3 landscape (420 × 297 mm) at 300 dpi</strong></div>
+
+  <!-- Artist References -->
+<div class="artist-links">
+  <h2>Artist References — Exploring Text, Meaning & Material</h2>
+  <div class="artist-grid">
+
+    <div class="artist-card">
+      <a href="https://mararza.com/" target="_blank">
+        <img src="images/mar-arza-thumb.jpg" alt="Mar Arza artwork thumbnail">
+        <h3>Mar Arza</h3>
+      </a>
+      <p>Turning poetic text fragments into delicate sculptural narratives about memory and language.</p>
+    </div>
+
+    <div class="artist-card">
+      <a href="https://www.jennyholzer.com/" target="_blank">
+        <img src="images/jenny-holzer-thumb.jpg" alt="Jenny Holzer projection thumbnail">
+        <h3>Jenny Holzer</h3>
+      </a>
+      <p>Using projected language and LED text to confront issues of power, identity, and public space.</p>
+    </div>
+
+    <div class="artist-card">
+      <a href="https://www.barbarakruger.com/" target="_blank">
+        <img src="images/barbara-kruger-thumb.jpg" alt="Barbara Kruger text artwork thumbnail">
+        <h3>Barbara Kruger</h3>
+      </a>
+      <p>Combining bold typography with imagery to critique consumerism and social constructs.</p>
+    </div>
+
+    <div class="artist-card">
+      <a href="https://www.edruscha.com/" target="_blank">
+        <img src="images/ed-ruscha-thumb.jpg" alt="Ed Ruscha artwork thumbnail">
+        <h3>Ed Ruscha</h3>
+      </a>
+      <p>Painting and photographing words as visual objects reflecting culture and landscape.</p>
+    </div>
+
+    <div class="artist-card">
+      <a href="https://www.taubaauerbach.com/" target="_blank">
+        <img src="images/tauba-auerbach-thumb.jpg" alt="Tauba Auerbach artwork thumbnail">
+        <h3>Tauba Auerbach</h3>
+      </a>
+      <p>Exploring systems of language, abstraction, and code through vibrant typographic forms.</p>
+    </div>
+
+  </div>
+</div>
 
   <!-- Sample image -->
   <div class="example">
